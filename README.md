@@ -1,2 +1,2 @@
-# spring-boot-crud-mongo-atlas
-spring-boot-crud-mongo-atlas
+# spring-boot-crud-sql
+spring-boot-crud-sql
