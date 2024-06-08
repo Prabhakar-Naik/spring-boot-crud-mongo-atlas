@@ -22,6 +22,7 @@ public class ProductService {
 
     private AtomicLong id = new AtomicLong(0);
 
+    // we are using the input data from users like parameter
     public ResponseEntity<?> createProduct(Product product) {
         Products products = new Products();
         products.setId(id.incrementAndGet());
