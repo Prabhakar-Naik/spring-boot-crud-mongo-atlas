@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -31,5 +32,21 @@ public class EmployeeTable {
     @Column(length = 20)
     @Enumerated(EnumType.STRING)
     private EmployeeRole role;
+
+    @OneToOne
+    @JoinColumn(name = "address_id")
+    private AddressTable address;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private DepartmentTable department;
+
+    @ManyToMany
+    @JoinTable(
+            name = "employee_mission",
+            joinColumns = @JoinColumn(name = "employee_id"),
+            inverseJoinColumns = @JoinColumn(name = "mission_id")
+    )
+    private List<MissionTable> missions;
 
 }
