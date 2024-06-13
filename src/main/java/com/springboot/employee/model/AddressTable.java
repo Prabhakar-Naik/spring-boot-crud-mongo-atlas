@@ -19,10 +19,16 @@ public class AddressTable {
     private String streetName;
     @Column(length = 15)
     private String houseNumber;
-    @Column(length = 10)
-    private String zipCode;
-    @Column(length = 30)
+    @Column(length = 20)
     private String landMark;
+    @Column(length = 20)
+    private String city;
+    @Column(length = 25)
+    private String state;
+    @Column(length = 10)
+    private String postalCode;
+    @Column(length = 25)
+    private String Country;
 
     @OneToOne
     @JoinColumn(name = "employee_id")

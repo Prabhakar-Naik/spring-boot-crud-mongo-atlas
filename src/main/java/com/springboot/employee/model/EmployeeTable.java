@@ -15,6 +15,7 @@ import java.util.List;
 @Entity
 public class EmployeeTable {
 
+//    @GenericGenerator(name = "UUID",strategy = "org.hibernate.id.UUIDGenerator")
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 50)
@@ -46,6 +47,7 @@ public class EmployeeTable {
             name = "employee_mission",
             joinColumns = @JoinColumn(name = "employee_id"),
             inverseJoinColumns = @JoinColumn(name = "mission_id")
+
     )
     private List<MissionTable> missions;
 

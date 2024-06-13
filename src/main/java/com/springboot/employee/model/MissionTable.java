@@ -22,6 +22,10 @@ public class MissionTable {
     @Column(length = 10)
     private int duration;
 
-    @ManyToMany(mappedBy = "missions")
+    @ManyToMany(mappedBy = "missions",
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+    })
     private List<EmployeeTable> employees;
 }
