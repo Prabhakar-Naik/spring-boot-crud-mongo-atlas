@@ -25,7 +25,7 @@ public class AddressTable {
     private String city;
     @Column(length = 25)
     private String state;
-    @Column(length = 10)
+    @Column(length = 12)
     private String postalCode;
     @Column(length = 25)
     private String Country;
