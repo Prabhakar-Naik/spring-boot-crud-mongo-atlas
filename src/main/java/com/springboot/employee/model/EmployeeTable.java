@@ -34,8 +34,8 @@ public class EmployeeTable {
     @Enumerated(EnumType.STRING)
     private EmployeeRole role;
 
-    @OneToOne
-    @JoinColumn(name = "address_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id",referencedColumnName = "addressId")
     private AddressTable address;
 
     @ManyToOne

@@ -18,6 +18,6 @@ public class EmployeeTableController {
 
     @PostMapping(value = "/create")
     public ResponseEntity<?> createEmployee(@RequestBody EmployeeTable employee){
-        return this.service.createEmployee(employee);
+        return this.service.createEmployee1(employee);
     }
 }
